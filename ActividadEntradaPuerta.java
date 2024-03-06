@@ -19,6 +19,11 @@ public class ActividadEntradaPuerta implements Runnable{
 	private String idPuerta;
 	private Parque parque;
 	
+	/**
+	 * Constructor de la clase ActividadEntradaPuertas.
+	 * @param idPuerta puerta por la que se realiza la actividad de entrada.
+	 * @param parque donde se realiza la actividad.
+	 */
 	public ActividadEntradaPuerta(String idPuerta, Parque parque) {
 		this.idPuerta=idPuerta;
 		this.parque=parque;
