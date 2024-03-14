@@ -17,18 +17,21 @@ public class ActividadEntradaPuerta implements Runnable{
 	
 	private static final int NUMENTRADAS=20;
 	private String idPuerta;
-	private Parque parque;
+	private Iparque parque;
 	
 	/**
 	 * Constructor de la clase ActividadEntradaPuertas.
 	 * @param idPuerta puerta por la que se realiza la actividad de entrada.
 	 * @param parque donde se realiza la actividad.
 	 */
-	public ActividadEntradaPuerta(String idPuerta, Parque parque) {
+	public ActividadEntradaPuerta(String idPuerta, Iparque parque) {
 		this.idPuerta=idPuerta;
 		this.parque=parque;
 	}
 	
+	/**
+	 * Método run que lanza la actividad.
+	 */
 	public void run() {
 		for(int i=0;i<NUMENTRADAS;i++) {
 			try {

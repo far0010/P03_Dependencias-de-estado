@@ -2,8 +2,6 @@ package p03.c03;
 
 import java.util.Enumeration;
 import java.util.Hashtable; 
-
-public class Parque implements Iparque{
 	/**
 	 * Simulador de entradas/salidas del parque
 	 *
@@ -12,6 +10,8 @@ public class Parque implements Iparque{
 	 * @version 1.0
 	 * Práctica 3
 	 */
+public class Parque implements Iparque{
+	
 	private final int MAX_AFORO=50; // aforo del parque
 	private int contadorPersonasTotales; // cuenta las personas que hay actualmente
 	private Hashtable<String, Integer> contadorPersonasPuerta;
@@ -19,6 +19,9 @@ public class Parque implements Iparque{
 	private Double tmedio;
 	private Long tactual;
 	
+	/**
+	 * Constructor
+	 */
 	public Parque() {
 		contadorPersonasTotales=0;
 		contadorPersonasPuerta= new Hashtable<String,Integer>();
@@ -97,6 +100,7 @@ public class Parque implements Iparque{
 		notify(); // ya han salido del parque pueden entrar
 	}
 	
+	
 	private void imprimirInfoEntradaPuerta(String puerta) {
 		System.out.println();
 		System.out.println("Entrada al parque por Puerta "+ puerta);
@@ -130,5 +134,6 @@ public class Parque implements Iparque{
 			}
 		}
 	}
+	
 
 }

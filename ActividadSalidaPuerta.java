@@ -4,27 +4,30 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Permite la salida del parque
+ *
+ * @author Fernando Arroyo Redondo
+ * @author Francisco J Arroyo Redondo
+ * @version 1.0
+ * Práctica 3
+ */
 public class ActividadSalidaPuerta implements Runnable{
-	/**
-	 * Permite la salida del parque
-	 *
-	 * @author Fernando Arroyo Redondo
-	 * @author Francisco J Arroyo Redondo
-	 * @version 1.0
-	 * Práctica 3
-	 */
+	
 	private static final int NUMSALIDAS=20;
 	private String idPuerta;
-	private Parque parque;
+	private Iparque parque;
 	
-	public ActividadSalidaPuerta(String idPuerta, Parque parque) {
+	
+	public ActividadSalidaPuerta(String idPuerta, Iparque parque) {
 		this.idPuerta=idPuerta;
 		this.parque=parque;
 	}
+	
 	public void run() {
 		for(int i=0;i<NUMSALIDAS;i++) {
 			try {
-				int numero = (int)(Math.random()*1000+500);
+				int numero = (int)(Math.random()*1000+100);
 				parque.salirDelParque(idPuerta);
 				TimeUnit.MILLISECONDS.sleep(numero);
 			}catch (InterruptedException e) {
