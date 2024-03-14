@@ -32,7 +32,7 @@ public class ActividadEntradaPuerta implements Runnable{
 	public void run() {
 		for(int i=0;i<NUMENTRADAS;i++) {
 			try {
-				int numero = (int)(Math.random()*1000+100);
+				int numero = (int)(Math.random()*1000+100); // El descanso influye en la ejecución de los hilos.
 				parque.entrarAlParque(idPuerta);
 				TimeUnit.MILLISECONDS.sleep(numero);
 			}catch (InterruptedException e) {
