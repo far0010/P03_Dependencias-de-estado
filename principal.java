@@ -10,7 +10,7 @@ package p03.c03;
  */
 public class principal {
 	/**
-	 * Modulo principal lanza el programa.
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -25,13 +25,10 @@ public class principal {
 				String puerta = "" + ((char) (letra_puerta++));
 				// hilos de entrada
 				Thread entrada = new Thread(new ActividadEntradaPuerta(puerta, parque));
-				
+				entrada.start();
 				// hilos de salida
 				Thread salida = new Thread(new ActividadSalidaPuerta(puerta, parque));
-				entrada.start();
 				salida.start();
-			
-			
 
 		}
 	}
