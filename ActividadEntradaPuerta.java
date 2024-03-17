@@ -14,9 +14,19 @@ import java.util.logging.Logger;
  */
 public class ActividadEntradaPuerta implements Runnable{
 	
-	
+	/*
+	 * Número máximo de entradas por cada puerta.
+	 */
 	private static final int NUMENTRADAS=20;
+
+	/*
+	 * Identificación de la puerta utilizada.
+	 */
 	private String idPuerta;
+
+	/*
+	 * Parque que se usa.
+	 */
 	private Iparque parque;
 	
 	/**
